@@ -5,3 +5,14 @@ Game class should keep record of tiles that have not appeared in the game or sim
 Game class should provide method for drawing cards and method for eliminating cards in terms of analysing
 
 game.py should consist main function for playing normal mahjong game
+
+input:
+hands.txt:
+UTF-8,
+each hand pattern on separate lines, with first element being pattern name,
+and following elements are tile patterns,
+each elements are separated using [space] or , or [tab] or \n or ;
+
+tiles.txt:
+UTF-8,
+each tiles separated by \n or , or [space] or [tab] or ;
