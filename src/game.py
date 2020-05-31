@@ -2,7 +2,9 @@
 Game class for holding mahjong game
 """
 
-#from player import Player
+from player import Player
+from computer import Computer
+from human import Human
 import random
 
 class Game:
@@ -47,3 +49,16 @@ class Game:
 
     def num_tiles(self):
         return self.num_tiles
+
+
+    def add_player(self, player):
+        if len(self.players) < 4 and isinstance(player, Player):
+            self.players.append(player)
+        else:
+            print('player error')
+        return
+
+
+if __name__=='__main__':
+    path = 'where the rule files lies'
+    game = Game(path)

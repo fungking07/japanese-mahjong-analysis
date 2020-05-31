@@ -31,3 +31,6 @@ return random tile
 
 num_tiles():
 return num_tiles
+
+add_player(Player player):
+adds player of Player class into
