@@ -1,0 +1,2 @@
+train.py should load game.py for the game
+train.py uses the game to update some coefficients and constants saved in train_data.csv to increase accuracy

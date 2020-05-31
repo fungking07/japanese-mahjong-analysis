@@ -1,0 +1,2 @@
+computer class extends human class
+the computer class allows using the analysed data to make decisions

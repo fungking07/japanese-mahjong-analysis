@@ -1,0 +1,2 @@
+opponent class extends player class
+opponent class keep track of dumped tiles only.
