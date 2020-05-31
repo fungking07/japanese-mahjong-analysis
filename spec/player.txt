@@ -1,3 +1,3 @@
 player.py should include a history-sensitive dump space, personal score, condition flags (立直?)
 this is a parent for opponent class and human class, or even computer class if we are also implementing a japanese mahjong game
-player class should allow discarding tiles, drawing tiles and 立直
+Player class should allow discarding tiles, drawing tiles and 立直
