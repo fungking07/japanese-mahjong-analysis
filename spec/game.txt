@@ -16,3 +16,18 @@ each elements are separated using [space] or , or [tab] or \n or ;
 tiles.txt:
 UTF-8,
 each tiles separated by \n or , or [space] or [tab] or ;
+
+output:
+Game class:
+instance:
+tiles : all possible tiles
+num_tiles : number of unused tiles
+hands : possible hand patterns in dict{"hand":"pattern_name", "pattern":list of tiles}
+players : 4 players in the game
+
+method:
+draw_tile() :
+return random tile
+
+num_tiles():
+return num_tiles
