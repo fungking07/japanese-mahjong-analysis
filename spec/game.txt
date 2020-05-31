@@ -1,0 +1,7 @@
+game.py should setup the game class, and load possible scoring hand patterns (役種) from separate file
+game class should include 4 players from player.py
+game class should count number of tiles left unused in the game for reference
+game class should keep record of tiles that have not appeared in the game or simply not known
+game class should provide method for drawing cards and method for eliminating cards in terms of analysing
+
+game.py should consist main function for playing normal mahjong game

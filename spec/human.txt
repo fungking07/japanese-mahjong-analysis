@@ -1,0 +1,4 @@
+human class extends player class
+human class knows personal tiles as private information
+human class can call analysis method to analyse opponent data based on dumped tiles and 立直
+the analysis method load prediction probability constants from train_data.csv
