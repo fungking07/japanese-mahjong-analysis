@@ -53,3 +53,11 @@ class Player:
         else:
             print("Error: Invalid tile input")
         return
+
+
+    def check(self):
+        # check if winnable
+        suits = self.game.detect_suits(self.tiles)
+
+        # check for pattern
+        return
