@@ -9,10 +9,12 @@ import random
 
 class Game:
     def __init__(self, dir_path):
-        self.tiles = load_tiles(dir_path) # load all tiles from file for different mahjong
+        self.full_list = load_tiles(dir_path) # load all tiles from file for different mahjong
+        self.tiles = self.full_list.copy()
         self.num_tiles = len(self.tiles)
         self.hands = load_hands(dir_path) # load all hands from file for different mahjong
         self.players = []
+        self.suit = detect_suits(full_list)
 
 
     def load_tiles(self, dir_path):
@@ -56,6 +58,46 @@ class Game:
             self.players.append(player)
         else:
             print('player error')
+        return
+
+
+    def detect_suits(self, tile_list):
+        # detect type of suits in the list of tiles
+        suits = []
+        for i in tile_list:
+            if not i[-1] in suits:
+                suits.append(i[-1])
+        return suits
+
+
+    def sort_tiles(self, tile_list):
+        # follow orderings
+        tile_list = tile_list.copy()
+        tiles = [ [] for i in suit ]
+        for i in range(len(suit)):
+            for c in tile_list:
+                if c[-1] == suit[i]
+                tiles[i].append(c)
+            for rmv in tiles[i]:
+                tile_list.remove(rmv)
+
+
+        def swap(a, b, list):
+            tmp = list[a]
+            list[a] = list[b]
+            list[b] = tmp
+
+
+        for ts in tiles:
+            # iterative selection sort
+            for i in range(len(ts)):
+                tmp = ts[i]
+                loc = i
+                for j in range(i+1, len(ts)): # python range will not gen numbers if i+1 >= len(ts)
+                    if ts[j] > tmp:
+                        loc = j
+                        tmp = ts[j]
+                swap(i,j,ts)
         return
 
 
