@@ -60,5 +60,15 @@ class Game:
 
 
 if __name__=='__main__':
-    path = 'where the rule files lies'
+    path = './'
     game = Game(path)
+    game_mode = 'uninit'
+    while not isnumeric(game_mode):
+        game_mode = input("Enter number of players in 0-4: ")
+    game_mode = int(game_mode)
+    num_player = 0
+    while num_player < game_mode:
+        game.add_player(Human())
+        num_player += 1
+    while num_player < 4:
+        game.add_player(Computer())
