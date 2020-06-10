@@ -15,6 +15,7 @@ class Game:
         self.hands = load_hands(dir_path) # load all hands from file for different mahjong
         self.players = []
         self.suit = detect_suits(full_list)
+        self.reserved = []
 
 
     def load_tiles(self, dir_path):
@@ -37,7 +38,7 @@ class Game:
         # split to form list of hands
         for i in range(len(content)):
             content[i] = content[i].split(' |,|\t|;')
-            content[i] = {"hand":content[i][0], "pattern": content[i][1:]}
+            content[i] = {"hand":content[i][0], "pattern": content[i][2:], "score":int(content[i][1])}
 
         return content
 

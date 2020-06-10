@@ -7,14 +7,16 @@ class Player:
         self.game = game
         self.name = name
         self.tiles = []
-        self.richi = False
+        self.richi = [False,0]
         self.score = score
         self.dump = []
-        self.str = [] # for tiles side put, dictionary with status and tiles
+        self.str = [] # for tiles that put aside, dictionary with status and tiles
+        self.menqian = True
 
 
     def set_richi(self):
-        self.richi = True
+        if self.menqian == True and self.game.num_tiles > 3:
+            self.richi[0] = True
         return
 
 
