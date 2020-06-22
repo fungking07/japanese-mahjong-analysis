@@ -102,6 +102,19 @@ class Game:
         return
 
 
+    def dump_tile(self, player, tile):
+        #find player in pos
+        ord = np.random.permutation(4)
+        gong = False
+        for i in ord:
+            if self.players[i] != player:
+                if self.players[i].gong(tile, player.pos):
+                    gong = True
+        if gong == False:
+            player.dump.append(tile)
+        return
+
+
 if __name__=='__main__':
     path = './'
     game = Game(path)
