@@ -49,9 +49,10 @@ class Player:
 
     def dump_tile(self, tile):
         if tile in self.tiles:
-            self.dump.append(tile)
-            self.tiles.remove(tile)
-            self.dump = self.game.sort_tiles(self.dump)
+            #self.dump.append(tile)
+            #self.tiles.remove(tile)
+            #self.dump = self.game.sort_tiles(self.dump)
+            self.game.dump_tile(tile, self)
         else:
             print("Error: Invalid tile input")
         return
