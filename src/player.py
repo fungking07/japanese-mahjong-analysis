@@ -50,7 +50,7 @@ class Player:
     def dump_tile(self, tile):
         if tile in self.tiles:
             #self.dump.append(tile)
-            #self.tiles.remove(tile)
+            self.tiles.remove(tile)
             #self.dump = self.game.sort_tiles(self.dump)
             self.game.dump_tile(tile, self)
         else:
@@ -64,3 +64,79 @@ class Player:
 
         # check for pattern
         return
+
+
+    def ong(self, tile, pos):
+        num = 0
+        for h in self.tiles:
+            if h == tile:
+                num += 1
+        res = ""
+        if num == 3 or (num == 2 and self.pos != pos):
+            type == ""
+            if num == 3:
+                type = "gong"
+            else:
+                type = "pong"
+
+            while len(res) == 0:
+                res = input("{} {} (y/n)".format(type, tile))
+                if res.casefold() == "y":
+                    for i in range(num):
+                        self.tiles.remove(tile)
+                    self.str.append({"tile" : tile, "type" : type, "pos" : pos})
+                    if self.menqian == True:
+                        self.menqian = self.pos == pos
+                        dp = input("dump {}".format(self.tiles))
+                        self.dump_tile(self.tiles[dp])
+                    return True
+                elif res.casefold() == "n":
+                    return False
+                else:
+                    res = ""
+
+        else:
+            return False
+
+
+    def eat(self, tile):
+        ls = []
+        for i in self.tiles:
+            if i[1] == tile[1] and i[0] != tile[0] and abs(int(i[0]) - int(tile[0])) <= 2:
+                ls.append(i)
+
+        flag = False
+        newls = []
+
+        if len(ls) < 2:
+            return False
+        else:
+            nls = [ int(i[0]) for i in ls ]
+            for i in range(len(nls)):
+                diff = int(tile[0] - nls[i])
+                if nls[i] + diff in nls:
+                    flag = True
+                    k = -1
+                    ind = 0
+                    while k < 0:
+                        if nls[ind] == nls[i] + diff:
+                            k = ind
+                    newls.append([ls[i], ls[k])
+
+        res = ""
+        while flag and len(res) == 0:
+            while len(res) == 0:
+                res = input("{} {} (y/n)".format(type, tile))
+                if res.casefold() == "y":
+                    for i in range(num):
+                        self.tiles.remove(tile)
+                    self.str.append({"tile" : tile, "type" : type, "pos" : pos})
+                    if self.menqian == True:
+                        self.menqian = self.pos == pos
+                        dp = input("dump {}".format(self.tiles))
+                        self.dump_tile(self.tiles[dp])
+                    return True
+                elif res.casefold() == "n":
+                    return False
+                else:
+                    res = ""

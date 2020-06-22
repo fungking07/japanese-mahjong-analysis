@@ -105,12 +105,17 @@ class Game:
     def dump_tile(self, player, tile):
         #find player in pos
         ord = np.random.permutation(4)
-        gong = False
-        for i in ord:
-            if self.players[i] != player:
-                if self.players[i].gong(tile, player.pos):
-                    gong = True
-        if gong == False:
+        took = False
+        for i in range(1, 4):
+            loc = i + player.pos
+            if loc >= 4:
+                loc -= 4
+            if took == False:
+                took = self.players[loc].ong(tile, player.pos)
+
+        took = self.players[player.pos - 1].eat(tile)
+
+        if took == False:
             player.dump.append(tile)
         return
 
