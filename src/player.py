@@ -12,7 +12,7 @@ class Player:
         self.dump = []
         self.str = [] # for tiles that put aside, dictionary with status and tiles
         self.menqian = True
-        self.pos
+        self.pos = pos
 
 
     def set_richi(self):
@@ -31,8 +31,8 @@ class Player:
 
 
     def draw_tile(self):
-        self.tiles.append(self.game.draw_tile())
-        return
+        tile = self.game.draw_tile()
+        return tile
 
 
     def hand(self):
@@ -53,7 +53,7 @@ class Player:
             #self.dump.append(tile)
             self.tiles.remove(tile)
             #self.dump = self.game.sort_tiles(self.dump)
-            self.game.dump_tile(tile, self)
+            self.game.dump_tile(self, tile)
         else:
             print("Error: Invalid tile input")
         return
@@ -103,7 +103,7 @@ class Player:
                     while k < 0:
                         if nls[ind] == nls[i] + diff:
                             k = ind
-                    newls.append([ls[i], ls[k])
+                    newls.append([ls[i], ls[k]])
 
         if len(newls) > 0:
             return newls

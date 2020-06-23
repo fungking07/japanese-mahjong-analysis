@@ -22,6 +22,7 @@ class Human(Player):
                         self.tiles.remove(tile)
 
                 self.str.append(pos)
+                self.dump_tile()
                 return True
             elif res.casefold() == 'n':
                 return False
@@ -53,3 +54,25 @@ class Human(Player):
                     return True
             except:
                 res = ""
+
+
+    def dump_tile(self):
+        for i in self.tiles:
+            print("{} ".format(i), end="")
+        print()
+
+        res = -1
+        while res<0 or res >= len(self.tiles):
+            res = input("Enter the position of tile to be disposed: ")
+            try:
+                res = int(res)
+                res -= 1
+            except:
+                res = -1
+        super().dump_tile(self.tiles[res])
+        return
+
+
+    def round(self):
+        tile = super().draw_tile()
+        super().ong(tile, self.pos)

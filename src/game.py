@@ -3,18 +3,19 @@ Game class for holding mahjong game
 """
 
 from player import Player
-from computer import Computer
+#from computer import Computer
 from human import Human
 import random
+import re
 
 class Game:
     def __init__(self, dir_path):
-        self.full_list = load_tiles(dir_path) # load all tiles from file for different mahjong
+        self.full_list = self.load_tiles(dir_path) # load all tiles from file for different mahjong
         self.tiles = self.full_list.copy()
         self.num_tiles = len(self.tiles)
-        self.hands = load_hands(dir_path) # load all hands from file for different mahjong
+        #self.hands = self.load_hands(dir_path) # load all hands from file for different mahjong
         self.players = []
-        self.suit = detect_suits(full_list)
+        self.suit = self.detect_suits(self.full_list)
         self.reserved = []
 
 
@@ -25,7 +26,7 @@ class Game:
             content = file.read()
 
         # split string to get all tiles
-        content = content.split(' |,|\t|\n|;')
+        content = re.split(' |,|\t|\n|;', content)
         return content
 
 
@@ -37,7 +38,7 @@ class Game:
 
         # split to form list of hands
         for i in range(len(content)):
-            content[i] = content[i].split(' |,|\t|;')
+            content[i] = re.split(' |,|\t|;', content[i])
             content[i] = {"hand":content[i][0], "pattern": content[i][2:], "score":int(content[i][1])}
 
         return content
@@ -77,8 +78,8 @@ class Game:
         tiles = [ [] for i in suit ]
         for i in range(len(suit)):
             for c in tile_list:
-                if c[-1] == suit[i]
-                tiles[i].append(c)
+                if c[-1] == suit[i]:
+                    tiles[i].append(c)
             for rmv in tiles[i]:
                 tile_list.remove(rmv)
 
