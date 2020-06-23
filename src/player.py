@@ -3,7 +3,7 @@ Player class as generic template
 """
 
 class Player:
-    def __init__(self, name, score, game):
+    def __init__(self, name, score, game, pos):
         self.game = game
         self.name = name
         self.tiles = []
@@ -12,6 +12,7 @@ class Player:
         self.dump = []
         self.str = [] # for tiles that put aside, dictionary with status and tiles
         self.menqian = True
+        self.pos
 
 
     def set_richi(self):
@@ -71,30 +72,11 @@ class Player:
         for h in self.tiles:
             if h == tile:
                 num += 1
-        res = ""
-        if num == 3 or (num == 2 and self.pos != pos):
-            type == ""
-            if num == 3:
-                type = "gong"
-            else:
-                type = "pong"
 
-            while len(res) == 0:
-                res = input("{} {} (y/n)".format(type, tile))
-                if res.casefold() == "y":
-                    for i in range(num):
-                        self.tiles.remove(tile)
-                    self.str.append({"tile" : tile, "type" : type, "pos" : pos})
-                    if self.menqian == True:
-                        self.menqian = self.pos == pos
-                        dp = input("dump {}".format(self.tiles))
-                        self.dump_tile(self.tiles[dp])
-                    return True
-                elif res.casefold() == "n":
-                    return False
-                else:
-                    res = ""
-
+        if num == 3:
+            return {"type":"gong", "tile":tile, "pos":pos}
+        elif num == 2 and pos != self.pos:
+            return {"type":"pong", "tile":tile, "pos":pos}
         else:
             return False
 
@@ -123,20 +105,7 @@ class Player:
                             k = ind
                     newls.append([ls[i], ls[k])
 
-        res = ""
-        while flag and len(res) == 0:
-            while len(res) == 0:
-                res = input("{} {} (y/n)".format(type, tile))
-                if res.casefold() == "y":
-                    for i in range(num):
-                        self.tiles.remove(tile)
-                    self.str.append({"tile" : tile, "type" : type, "pos" : pos})
-                    if self.menqian == True:
-                        self.menqian = self.pos == pos
-                        dp = input("dump {}".format(self.tiles))
-                        self.dump_tile(self.tiles[dp])
-                    return True
-                elif res.casefold() == "n":
-                    return False
-                else:
-                    res = ""
+        if len(newls) > 0:
+            return newls
+        else:
+            return False

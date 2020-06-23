@@ -104,7 +104,6 @@ class Game:
 
     def dump_tile(self, player, tile):
         #find player in pos
-        ord = np.random.permutation(4)
         took = False
         for i in range(1, 4):
             loc = i + player.pos
