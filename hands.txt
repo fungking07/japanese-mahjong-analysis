@@ -1,0 +1,26 @@
+断么九, A, B, C, D, E, F, G, H, I, J, K, L, M, M, A!=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, B!=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, C!=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, D!=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, E!=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, F!=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, G!=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, H!=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, I!=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, J!=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, K!=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, L!=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, M!=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, N!=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索, A = B = C or (B = A+1 and C = B+1 and A < 7), D = E = F or (E = D+1 and F = E+1 and D < 7), G = H = I or (H = G+1 and I = H+1 and G < 7), J = K = L or (K = J+1 and L = K+1 and J < 7)
+平和, A, A+1, A+2, B, B+1, B+2, C, C+1, C+2, D, D+1, D+2, E, E, A < 7, B < 7, C < 7, D < 7
+一盃口, A, A+1, A+2, A, A+1, A+2, B, C, D, E, F, G, H, H, A < 7, (C = B+1 and D = C+1 and B < 7), (F = E+1 and G = F+1 and E < 7)
+三色同順, A, A+1, A+2, B, B+1, B+2, C, C+1, C+2, D, E, F, G, G, A = X萬 or X筒 or X索, B = X萬 or X筒 or X索, C = X萬 or X筒 or X索, 1<=X<=7, D = E = F or (E = D+1 and F = E+1 and D < 7)
+一気通貫,A, B, C, D, E, F, G, H, I, J, K, L, M, M, A=1萬 or 1筒 or 1索, B=A+1, C=B+1, D=C+1, E=D+1, F=E+1, G=F+1, H=G+1, I=H+1, J = K = L or (K = J+1 and L = K+1 and J < 7)
+混全帯么九,
+七対子, A, A, B, B, C, C, D, D, E, E, F, F, G, G, A != B != C != D != E != F != G
+対々和, A, A, A, B, B, B, C, C, C, D, D, D, E, E
+三暗刻, A, A, A, B, B, B, C, C, C, D, E, F, G, G, D = E = F or (E = D+1 and F = E+1 and D < 7)
+混老頭, A, A, A, B, B, B, C, C, C, D, D, D, E, E, A=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索, B=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, C=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, D=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, E=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板
+混老頭, A, A, B, B, C, C, D, D, E, E, F, F, G, G, A=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索, B=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, C=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, D=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, E=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, F=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, G=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索 or 東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板
+三色同刻, A, A, A, B, B, B, C, C, C, D, E, F, G, G, A = X萬 or X筒 or X索, B = X萬 or X筒 or X索, C = X萬 or X筒 or X索, D = E = F or (E = D+1 and F = E+1 and D < 7)
+小三元, A, A, A, B, B, B, C, C, D, E, F, G, H, I, A=紅中 or 發財 or 白板, B=紅中 or 發財 or 白板, C=紅中 or 發財 or 白板, A!=B, B!=C, C!=A, D = E = F or (E = D+1 and F = E+1 and D < 7), G = H = I or (H = G+1 and I = H+1 and G < 7)
+混一色,
+純全帯么九,
+二盃口, A, A+1, A+2, A, A+1, A+2, B, B+1, B+2, B, B+1, B+2, C, C, A < 7, B < 7
+清一色,
+国士無双, 1萬, 9萬, 1筒, 9筒, 1索, 9索, 東風, 南風, 西風, 北風, 白板, 發財, 紅中, A, A=1萬 or 9萬 or 1筒 or 9筒 or 1索 or 9索 or 東風 or 南風 or 西風 or 北風 or 白板 or 發財 or 紅中
+四暗刻, A, A, A, B, B, B, C, C, C, D, D, D, E, E
+大三元, A, B, C, D, D, 白板, 白板, 白板, 發財, 發財, 發財, 紅中, 紅中, 紅中, A = B = C or (B = A+1 and C = B+1 and A < 7),
+字一色, A, A, A, B, B, B, C, C, C, D, D, D, E, E, A=東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, B=東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, C=東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, D=東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板, E=東風 or 南風 or 西風 or 北風 or 紅中 or 發財 or 白板
+小四喜, A, A, A, B, B, B, C, C, C, D, D, E, F, G, A=東風 or 南風 or 西風 or 北風, B=東風 or 南風 or 西風 or 北風, C=東風 or 南風 or 西風 or 北風, D=東風 or 南風 or 西風 or 北風, A != B != C != D, E == F == G or (F=E+1, G=F+1 and E<7)
+大四喜, 東風, 東風, 東風, 東風, 南風, 南風, 南風, 南風, 西風, 西風, 西風, 西風, 北風, 北風, 北風, 北風, A, A
+綠一色, A, B, C, D, E, F, G, H, I, J, K, L, M, N, A=2索 or 3索 or 4索 or 6索 or 8索 or 發財, B=2索 or 3索 or 4索 or 6索 or 8索 or 發財, C=2索 or 3索 or 4索 or 6索 or 8索 or 發財, D=2索 or 3索 or 4索 or 6索 or 8索 or 發財, E=2索 or 3索 or 4索 or 6索 or 8索 or 發財, F=2索 or 3索 or 4索 or 6索 or 8索 or 發財, G=2索 or 3索 or 4索 or 6索 or 8索 or 發財, H=2索 or 3索 or 4索 or 6索 or 8索 or 發財, I=2索 or 3索 or 4索 or 6索 or 8索 or 發財, J=2索 or 3索 or 4索 or 6索 or 8索 or 發財, K=2索 or 3索 or 4索 or 6索 or 8索 or 發財, L=2索 or 3索 or 4索 or 6索 or 8索 or 發財, M=2索 or 3索 or 4索 or 6索 or 8索 or 發財, N=2索 or 3索 or 4索 or 6索 or 8索 or 發財
+清老頭, A, A, A, B, B, B, C, C, C, D, D, D, E, E, A=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索, B=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索, C=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索, D=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索, E=1萬 or 1筒 or 1索 or 9萬 or 9筒 or 9索
+九蓮宝燈, A, A, A, B, C, D, E, F, G, H, I, I, I, J, A=1萬 or 1筒 or 1索, B=A+1, C=B+1, D=C+1, E=D+1, F=E+1, G=F+1, H=G+1, I=H+1, J = A or B or C or D or E or F or G or H or I
